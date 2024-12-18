@@ -20,9 +20,9 @@
             <nav>
                 <ul>
                     <li>Home</li>
-                    <li>Layanan</li>
+                    <li><a href="#layanan">Layanan</a></li>
                     <li>Menjadi Klien</li>
-                    <li>Hubungi Kami</li>
+                    <li><a href="#hubungi">Hubungi Kami</a></li>
                     <li>Konselor</li>
                 </ul>
             </nav>
@@ -34,7 +34,7 @@
     </main>
 
     <footer>
-        <div class="container-footer">
+        <div class="container-footer" id="hubungi">
             <h1>Hubungi Kami</h1>
             <p>
                 Anda dapat menghubungi kami melalui email atau telepon di bawah ini: <br>
@@ -56,7 +56,7 @@
                     <li><a href="">Menjadi Klien </a></li>
                 </ul>
                 <ul>
-                    <li><a href="">Hubungi Kami</a></li>
+                    <li><a href="#hubungi">Hubungi Kami</a></li>
                     <li><a href="">Kebijakan Privasi</a></li>
                 </ul>
             </nav>
