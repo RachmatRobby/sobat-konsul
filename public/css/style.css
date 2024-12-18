@@ -145,6 +145,70 @@ header nav ul {
   padding: 10px 20px;
   border-radius: 5px;
 }
+/* Layanan Kami Section */
+.layanan-kami {
+  text-align: center;
+  margin: 50px 0;
+  background-color: #F0F8F0; /* Warna hijau lembut */
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.layanan-kami h1 {
+  color: #2D3F2F;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.layanan-kami p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.layanan-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.layanan-card {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 350px;
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.layanan-card:hover {
+  transform: translateY(-10px);
+}
+
+.layanan-card img {
+  width: 100%;
+  height: auto;
+}
+
+.layanan-card .card-content {
+  padding: 20px;
+}
+
+.layanan-card h2 {
+  color: #2D3F2F;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.layanan-card p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
 
 footer {
   background-color: #618264;
