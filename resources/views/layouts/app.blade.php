@@ -52,7 +52,7 @@
                 <ul>
                     <li><a href="">Home</a></li>
                     <li><a href="">Tentang Kami </a></li>
-                    <li><a href="">Layanan </a></li>
+                    <li><a href="#layanan">Layanan</a></li>
                     <li><a href="">Menjadi Klien </a></li>
                 </ul>
                 <ul>
