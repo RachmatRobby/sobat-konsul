@@ -189,18 +189,21 @@ header nav ul {
 }
 
 .layanan-card img {
-  width: 100%;
-  height: auto;
+  width: 100%; /* Gambar memenuhi lebar kartu */
+  height: 200px; /* Atur tinggi gambar */
+  object-fit: cover; /* Potong gambar agar proporsional */
+  display: block; /* Hapus whitespace ekstra */
 }
 
 .layanan-card .card-content {
-  padding: 20px;
+  padding: 20px; /* Jarak antar teks dan batas kartu */
 }
 
 .layanan-card h2 {
   color: #2D3F2F;
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .layanan-card p {
@@ -208,6 +211,7 @@ header nav ul {
   font-size: 14px;
   line-height: 1.5;
 }
+
 
 
 footer {

@@ -19,20 +19,22 @@
     <div class="layanan-cards">
         <!-- Card 1: Konseling Pribadi -->
         <div class="card">
-            <img src="{{ asset('assets/orangpusing.png') }}" alt="orang pusing">
+            <img src="{{ asset('assets/orangpusing.jpeg') }}" alt="orang pusing">
+            
             <div class="card-content">
                 <h2>Konseling Pribadi</h2>
                 <p>Membantu Anda menghadapi berbagai tantangan emosional seperti stres, kecemasan, atau kebingungan dalam membuat keputusan penting.</p>
             </div>
+            
         </div>
         <!-- Card 2: Konseling Masalah Rumah Tangga -->
         <div class="card">
-            <img src="{{ asset('assets/keluargaharmoni.png') }}" alt="keluarga harmoni">
+            <img src="{{ asset('assets/keluargaharmoni.jpeg') }}" alt="keluarga harmoni">
             <div class="card-content">
                 <h2>Konseling Masalah Rumah Tangga</h2>
                 <p>Membangun kembali komunikasi dan keharmonisan dalam hubungan Anda. Layanan ini membantu pasangan dan keluarga untuk mengatasi konflik.</p>
             </div>
-        </div>
+        </div>  
     </div>
 </div>
 
