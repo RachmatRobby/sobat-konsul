@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Konselor;
 use Illuminate\Http\Request;
 
 class SobatController extends Controller
@@ -22,7 +22,8 @@ class SobatController extends Controller
     }
     public function konselor()
     {
-        return view('konselor');
+        $konselors = Konselor::all(); // Pastikan model Konselor sudah diimport
+        return view('konselor', compact('konselors'));
     }
     /**
      * Store a newly created resource in storage.

@@ -16,9 +16,27 @@
                 <h3>Mau Mulai Konsultasi?</h3>
                 <p>Yuk Kenali Konseler Kami!</p>
             </div>
-            <div class="konseler-cards">
-                <!-- First Row -->
-                <div class="konseler-card">
+            <!-- <div class="konseler-cards">
+                 First Row -->
+                <div class="konseler-cards">
+                @foreach ($konselors as $konselor)
+    <div class="konseler-card">
+        <img src="{{ asset($konselor->profile_image) }}" alt="{{ $konselor->name }}">
+        <h3>{{ $konselor->name }}</h3>
+        <p>Psikolog Klinis spesialis di:</p>
+        <ul>
+            @foreach ($konselor->specializations as $specialization)
+                <li class="specialization-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>{{ $specialization }}</span>
+                </li>
+            @endforeach
+        </ul>
+        <button>Profil Lengkap</button>
+    </div>
+@endforeach
+</div>
+                <!-- <div class="konseler-card">
                     <img src="{{ asset('assets/aanisa.png') }}" alt="Rinda">
                     <h3>Rinda Anisah, M.Psi</h3>
                     <p>Psikolog Klinis spesialis di:</p>
@@ -74,67 +92,7 @@
                     </li>
                     </ul>
                     <button>Profil Lengkap</button>
-                </div>
-                
-                <!-- Second Row -->
-                <div class="konseler-card">
-                    <img src="{{ asset('assets/dicky.png') }}" alt="Dicky">
-                    <h3>Dicky Sujanto, M.Psi</h3>
-                    <p>Psikolog Klinis spesialis di:</p>
-                    <ul>
-                    <li class="specialization-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Depresi</span>
-                    </li>
-                    <li class="specialization-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Masalah Keluarga</span>
-                    </li>
-                    <li class="specialization-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Hubungan Percintaan</span>
-                    </li>
-                    <li class="specialization-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Karir & Pekerjaan</span>
-                    </li>
-                    <li class="specialization-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Dan lainnya</span>
-                    </li>
-                    </ul>
-                    <button>Profil Lengkap</button>
-                </div>
-                
-                <div class="konseler-card">
-                    <img src="{{ asset('assets/aanisaaxel.png') }}" alt="Anindya">
-                    <h3>Anindya Astria, M.Psi</h3>
-                    <p>Psikolog Klinis spesialis di:</p>
-                    <ul>
-                    <li class="specialization-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Depresi</span>
-                    </li>
-                    <li class="specialization-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Masalah Keluarga</span>
-                    </li>
-                    <li class="specialization-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Hubungan Percintaan</span>
-                    </li>
-                    <li class="specialization-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Karir & Pekerjaan</span>
-                    </li>
-                    <li class="specialization-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Dan lainnya</span>
-                    </li>
-                    </ul>
-                    <button>Profil Lengkap</button>
-                </div>
-            </div>
+                </div>-->
         </section>
     </main>
 </body>
