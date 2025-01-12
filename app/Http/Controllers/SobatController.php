@@ -20,7 +20,10 @@ class SobatController extends Controller
     {
         //
     }
-
+    public function konselor()
+    {
+        return view('konselor');
+    }
     /**
      * Store a newly created resource in storage.
      */

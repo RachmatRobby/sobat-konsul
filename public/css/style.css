@@ -145,123 +145,841 @@ header nav ul {
   padding: 10px 20px;
   border-radius: 5px;
 }
+
 /* Layanan Kami Section */
-.layanan-kami {
-  text-align: center;
-  margin: 50px 0;
-  background-color: #F0F8F0; /* Warna hijau lembut */
-  padding: 50px;
-  border-radius: 10px;
+.layanan-section {
+  background-color: #E7F1E9;
+  padding: 80px 100px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
 }
 
-.layanan-kami h1 {
+.layanan-header {
+  position: sticky;
+  top: 100px;
+  z-index: 2;
+  max-width: 400px;
+  flex-shrink: 0;
+}
+
+.layanan-header h2 {
   color: #2D3F2F;
   font-size: 36px;
-  margin-bottom: 10px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.layanan-kami p {
+.layanan-header p {
   color: #666;
   font-size: 16px;
-  margin-bottom: 30px;
+  line-height: 1.6;
 }
 
 .layanan-cards {
   display: flex;
-  justify-content: center;
+  flex-direction: row; /* Changed to row to place cards side by side */
   gap: 30px;
-  flex-wrap: wrap;
-  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+  flex-grow: 1;
 }
 
 .layanan-card {
-  background-color: #FFFFFF;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: white;
+  border-radius: 20px;
   overflow: hidden;
-  width: 350px;
-  text-align: left;
-  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: calc(50% - 15px); /* Set width to 50% minus half the gap */
+  flex-shrink: 0;
 }
 
 .layanan-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 
 .layanan-card img {
-  width: 100%; /* Gambar memenuhi lebar kartu */
-  height: 200px; /* Atur tinggi gambar */
-  object-fit: cover; /* Potong gambar agar proporsional */
-  display: block; /* Hapus whitespace ekstra */
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
-.layanan-card .card-content {
-  padding: 20px; /* Jarak antar teks dan batas kartu */
+.card-content {
+  padding: 20px;
 }
 
-.layanan-card h2 {
+.card-content h3 {
   color: #2D3F2F;
-  font-size: 18px;
-  margin-bottom: 10px;
-  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-weight: 600;
 }
 
-.layanan-card p {
+.card-content p {
   color: #666;
   font-size: 14px;
   line-height: 1.5;
 }
 
+@media (max-width: 992px) {
+  .layanan-section {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+  
+  .layanan-header {
+    position: relative;
+    top: 0;
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+  
+  .layanan-cards {
+    flex-direction: column; /* Stack cards vertically on mobile */
+    width: 100%;
+  }
+  
+  .layanan-card {
+    width: 100%; /* Full width on mobile */
+  }
+}
+/*statistik*/
+/* Statistics Section */
+.statistics-section {
+  padding: 80px 100px;
+  text-align: center;
+  background-color: #fff;
+}
 
+.statistics-header {
+  margin-bottom: 40px;
+}
+
+.statistics-header h2 {
+  font-size: 24px;
+  color: #2D3F2F;
+  margin-bottom: 15px;
+}
+
+.statistics-header .count {
+  font-size: 36px;
+  color: #4A7856;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.issues-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.issue-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #666;
+  font-size: 16px;
+}
+
+.issue-item i {
+  color: #4A7856;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .statistics-section {
+      padding: 40px 20px;
+  }
+
+  .issues-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+  }
+}
+/* Counselor Profiles Section */
+.counselor-section {
+  background-color: #E7F1E9;
+  padding: 80px 100px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.counselor-header {
+  position: sticky;
+  top: 100px;
+  z-index: 2;
+  max-width: 400px;
+  flex-shrink: 0;
+}
+
+.counselor-header h2 {
+  color: #2D3F2F;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.counselor-header p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.counselor-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  position: relative;
+  z-index: 2;
+  flex-grow: 1;
+}
+
+.counselor-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: calc(50% - 15px);
+  flex-shrink: 0;
+}
+
+.counselor-card:hover {
+  transform: translateY(-5px);
+}
+
+.counselor-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.counselor-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.counselor-info {
+  padding: 20px;
+}
+
+.counselor-info h3 {
+  color: #2D3F2F;
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.specialization-title {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.specialization-list {
+  list-style: none;
+  padding: 0;
+}
+
+.specialization-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: #666;
+  font-size: 14px;
+}
+
+.specialization-item i {
+  color: #4A7856;
+  font-size: 16px;
+}
+
+.profile-button {
+  display: inline-block;
+  padding: 10px 24px;
+  margin-top: 20px;
+  background: transparent;
+  border: 2px solid #4A7856;
+  color: #4A7856;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.profile-button:hover {
+  background: #4A7856;
+  color: white;
+}
+
+@media (max-width: 992px) {
+  .counselor-section {
+      flex-direction: column;
+      padding: 40px 20px;
+  }
+  
+  .counselor-header {
+      position: relative;
+      top: 0;
+      max-width: 100%;
+      margin-bottom: 40px;
+  }
+  
+  .counselor-cards {
+      flex-direction: column;
+      width: 100%;
+  }
+  
+  .counselor-card {
+      width: 100%;
+  }
+}
 
 footer {
-  background-color: #618264;
-  padding: 40px;
-  color: white;
-  display: flex;
-  justify-content: space-between;
+  background-color: white;
+  padding: 60px 100px 40px;
 }
 
-.container-footer h1 {
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-brand {
+  max-width: 300px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin-bottom: 20px;
 }
 
-.container-footer p {
-  margin-bottom: 40px;
-  font-weight: lighter;
+.footer-logo img {
+  width: 40px;
+  height: auto;
 }
 
-.container-footer button {
-  background-color: #2D3F2F;
-  color: white;
-  outline: none;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+.footer-logo span {
+  font-size: 20px;
+  color: #618264;
+  font-weight: bold;
 }
 
-.footer-nav nav {
+.company-info h4 {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.company-info p {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-style: italic;
+}
+
+.footer-links {
   display: flex;
-  justify-content: space-between;
-  gap: 80px;
+  gap: 60px;
 }
 
-.footer-nav nav ul {
+.footer-section h4 {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.footer-section ul {
   list-style: none;
+  padding: 0;
 }
 
-.footer-nav nav ul li {
-  margin-bottom: 20px;
+.footer-section ul li {
+  margin-bottom: 10px;
 }
 
-.footer-nav nav ul li a{
-  color: white;
+.footer-section ul li a {
+  color: #666;
   text-decoration: none;
+  font-size: 14px;
 }
 
-.last-foot {
+.footer-section p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.app-buttons img {
+  width: 150px; /* Sesuaikan ukuran sesuai kebutuhan */
+  height: auto; /* Pertahankan rasio aspek */
+  flex-direction: column;
+  flex: display;
+  gap: 20px;
+  transition: transform 0.3s; /* Tambahkan animasi opsional */
+}
+
+.app-buttons img:hover {
+  transform: scale(1.1); /* Membesarkan sedikit saat hover */
+}
+
+
+.app-button img {
+  height: 40px;
+  width: auto;
+}
+
+.copyright {
   background-color: #2D3F2F;
   text-align: center;
-  padding: 20px 0px;
-  color: white;
+  padding: 15px;
 }
+
+.copyright p {
+  color: white;
+  font-size: 14px;
+}
+
+@media (max-width: 992px) {
+  footer {
+      padding: 40px 20px;
+  }
+
+  .footer-content {
+      flex-direction: column;
+  }
+
+  .footer-links {
+      flex-wrap: wrap;
+      gap: 30px;
+  }
+
+  .footer-section {
+      min-width: calc(50% - 15px);
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-links {
+      flex-direction: column;
+  }
+
+  .footer-section {
+      width: 100%;
+  }
+}
+/* Welcome Section */
+.welcome-section {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 40px 20px;
+}
+
+/* Decorative circles */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.circle-1 {
+  width: 150px;
+  height: 150px;
+  background-color: #79AC78;
+  left: -40px;
+  top: -40px;
+}
+
+.circle-2 {
+  width: 80px;
+  height: 80px;
+  background-color: #618264;
+  left: 25%;
+  top: 80px;
+}
+
+.circle-3 {
+  width: 100px;
+  height: 100px;
+  background-color: #D0E7D2;
+  right: 25%;
+  top: 40px;
+}
+
+.circle-4 {
+  width: 120px;
+  height: 120px;
+  background-color: #79AC78;
+  right: -30px;
+  top: 20px;
+}
+
+.circle-5 {
+  width: 60px;
+  height: 60px;
+  background-color: #618264;
+  right: 33%;
+  top: 100px;
+}
+
+/* Content styles */
+.welcome-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.welcome-subtitle {
+  color: #618264;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.welcome-title {
+  color: #2D3F2F;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.welcome-highlight {
+  color: #79AC78;
+  display: block;
+  margin-top: 8px;
+}
+
+.welcome-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .welcome-section {
+      padding: 30px 15px;
+  }
+
+  .welcome-content {
+      padding: 0 15px;
+  }
+
+  .welcome-title {
+      font-size: 20px;
+  }
+
+  .welcome-description {
+      font-size: 14px;
+  }
+}
+
+/* Vision & Mission Section */
+.vision-mission {
+  padding: 80px 100px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.vision-mission-header {
+  margin-bottom: 50px;
+}
+
+.vision-mission-header h2 {
+  color: #2D3F2F;
+  font-size: 28px;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+
+.vision-mission-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #79AC78;
+}
+
+.vision-mission-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.vision-card, .mission-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.card-title {
+  color: #618264;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.mission-list {
+  list-style: none;
+  padding: 0;
+}
+
+.mission-list li {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.mission-list li::before {
+  content: "•";
+  color: #79AC78;
+  position: absolute;
+  left: 8px;
+  font-size: 20px;
+}
+
+.vision-text {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .vision-mission {
+      padding: 40px 20px;
+  }
+
+  .vision-mission-cards {
+      gap: 20px;
+  }
+
+  .vision-card, .mission-card {
+      padding: 20px;
+  }
+
+  .card-title {
+      font-size: 20px;
+  }
+
+  .vision-text, .mission-list li {
+      font-size: 14px;
+  }
+}
+
+/* Counselor Section */
+.konseler-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden; /* Untuk menangani circles yang mungkin keluar batas */
+}
+
+/* Styling untuk header */
+.konseler-header {
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.konseler-header h2 {
+  color: #618264;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.konseler-header h3 {
+  color: #2D3F2F;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.konseler-header p {
+  color: #666;
+  font-size: 18px;
+}
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  /* background-color: #A7C8AA; */
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.circle1 {
+  width: 150px;
+  height: 150px;
+  top: -20px;
+  background-color: #79AC78;
+  left: -50px;
+}
+
+.circle2 {
+  width: 80px;
+  height: 80px;
+  top: 50px;
+  background-color: #618264;
+  left: 20%;
+}
+
+.circle3 {
+  width: 100px;
+  height: 100px;
+  top: 30px;
+  background-color: #D0E7D2;
+  right: 15%;
+}
+
+.circle4 {
+  width: 120px;
+  height: 120px;
+  top: 10px;
+  background-color: #79AC78;
+  right: -30px;
+}
+
+.circle5 {
+  width: 60px;
+  height: 60px;
+  top: 100px;
+  background-color: #618264;
+  right: 35%;
+}
+.konseler-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.konseler-card {
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
+  padding: 30px;
+  transition: transform 0.3s ease-in-out;
+  margin: 0 auto;
+}
+
+.konseler-card:hover {
+  transform: translateY(-5px);
+}
+
+.konseler-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  /* Tambahan untuk centralize image */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.konseler-card h3 {
+  color: #2D3F2F;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.konseler-card p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+.konseler-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.konseler-card ul li {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.konseler-card ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #A7C8AA;
+}
+
+.konseler-card button {
+  background-color: #A7C8AA;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: 500;
+  width: 100%;
+}
+
+.konseler-card button:hover {
+  background-color: #8fb992;
+}
+
+@media (max-width: 992px) {
+  .konseler-cards {
+      grid-template-columns: 1fr;
+      gap: 20px;
+  }
+  
+  .konseler-card {
+      max-width: 100%;
+  }
+}
+
