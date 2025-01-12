@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <main>
     <section class="konseler-section">
             <!-- Tambahkan div untuk circles -->
@@ -22,12 +23,28 @@
                     <h3>Rinda Anisah, M.Psi</h3>
                     <p>Psikolog Klinis spesialis di:</p>
                     <ul>
-                        <li>Self-Growth</li>
-                        <li>Behavioral Change</li>
-                        <li>Love & Marriage</li>
-                        <li>Self-control</li>
+                    <li class="specialization-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Depresi</span>
+                    </li>
+                    <li class="specialization-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Masalah Keluarga</span>
+                    </li>
+                    <li class="specialization-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Hubungan Percintaan</span>
+                    </li>
+                    <li class="specialization-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Karir & Pekerjaan</span>
+                    </li>
+                    <li class="specialization-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Dan lainnya</span>
+                    </li>
                     </ul>
-                    <button>Book Layanan</button>
+                    <button>Profil Lengkap</button>
                 </div>
                 
                 <div class="konseler-card">
@@ -35,12 +52,28 @@
                     <h3>Amina Devina, M.Psi</h3>
                     <p>Psikolog Klinis spesialis di:</p>
                     <ul>
-                        <li>Self-Growth</li>
-                        <li>Behavioral Change</li>
-                        <li>Love & Marriage</li>
-                        <li>Self-control</li>
+                    <li class="specialization-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Depresi</span>
+                    </li>
+                    <li class="specialization-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Masalah Keluarga</span>
+                    </li>
+                    <li class="specialization-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Hubungan Percintaan</span>
+                    </li>
+                    <li class="specialization-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Karir & Pekerjaan</span>
+                    </li>
+                    <li class="specialization-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Dan lainnya</span>
+                    </li>
                     </ul>
-                    <button>Book Layanan</button>
+                    <button>Profil Lengkap</button>
                 </div>
                 
                 <!-- Second Row -->
@@ -49,12 +82,28 @@
                     <h3>Dicky Sujanto, M.Psi</h3>
                     <p>Psikolog Klinis spesialis di:</p>
                     <ul>
-                        <li>Self-Growth</li>
-                        <li>Marriage Counselor</li>
-                        <li>Love & Marriage</li>
-                        <li>Self-control</li>
+                    <li class="specialization-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Depresi</span>
+                    </li>
+                    <li class="specialization-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Masalah Keluarga</span>
+                    </li>
+                    <li class="specialization-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Hubungan Percintaan</span>
+                    </li>
+                    <li class="specialization-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Karir & Pekerjaan</span>
+                    </li>
+                    <li class="specialization-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Dan lainnya</span>
+                    </li>
                     </ul>
-                    <button>Book Layanan</button>
+                    <button>Profil Lengkap</button>
                 </div>
                 
                 <div class="konseler-card">
@@ -62,12 +111,28 @@
                     <h3>Anindya Astria, M.Psi</h3>
                     <p>Psikolog Klinis spesialis di:</p>
                     <ul>
-                        <li>Career Related</li>
-                        <li>Marriage Related</li>
-                        <li>Love & Marriage</li>
-                        <li>Self-control</li>
+                    <li class="specialization-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Depresi</span>
+                    </li>
+                    <li class="specialization-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Masalah Keluarga</span>
+                    </li>
+                    <li class="specialization-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Hubungan Percintaan</span>
+                    </li>
+                    <li class="specialization-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Karir & Pekerjaan</span>
+                    </li>
+                    <li class="specialization-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Dan lainnya</span>
+                    </li>
                     </ul>
-                    <button>Book Layanan</button>
+                    <button>Profil Lengkap</button>
                 </div>
             </div>
         </section>
