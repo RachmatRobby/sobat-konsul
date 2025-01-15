@@ -983,3 +983,185 @@ footer {
   }
 }
 
+/* Konsultasi Page Styles */
+.konsultasi-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.konsultasi-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* Profile Section */
+.konselor-profile {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.profile-image {
+  flex: 0 0 300px;
+}
+
+.profile-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-info h2 {
+  color: #2d4a22;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.profession {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.specialties {
+  margin-top: 1.5rem;
+}
+
+.specialties h3 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.specialties ul {
+  list-style: none;
+  padding: 0;
+}
+
+.specialties li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.specialties li::before {
+  content: "•";
+  color: #4CAF50;
+  position: absolute;
+  left: 0;
+}
+
+/* Section Styles */
+.about-section,
+.cases-section,
+.approach-section {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.section-icon {
+  width: 48px;
+  height: 48px;
+  background-color: #e8f5e9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.profile-icon::before {
+  content: "";
+  background: url('/path/to/profile-icon.svg') no-repeat center;
+  width: 24px;
+  height: 24px;
+}
+
+.cases-icon::before {
+  content: "";
+  background: url('/path/to/cases-icon.svg') no-repeat center;
+  width: 24px;
+  height: 24px;
+}
+
+.approach-icon::before {
+  content: "";
+  background: url('/path/to/approach-icon.svg') no-repeat center;
+  width: 24px;
+  height: 24px;
+}
+
+h3 {
+  color: #2d4a22;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.about-text {
+  line-height: 1.6;
+  color: #444;
+}
+
+/* CTA Button */
+.cta-section {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.konsultasi-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.konsultasi-btn:hover {
+  background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .konselor-profile {
+      flex-direction: column;
+  }
+
+  .profile-image {
+      flex: 0 0 auto;
+      max-width: 100%;
+  }
+
+  .specialties ul {
+      columns: 1;
+  }
+}
+.profile-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.profile-button:hover {
+  background-color: #45a049;
+}

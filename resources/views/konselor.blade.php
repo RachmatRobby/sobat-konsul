@@ -32,7 +32,7 @@
                 </li>
             @endforeach
         </ul>
-        <button>Profil Lengkap</button>
+        <a href="{{ route('dkonselor', $konselor->id) }}" class="profile-button">Profil Lengkap</a>
     </div>
 @endforeach
 </div>

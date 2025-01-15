@@ -14,3 +14,4 @@ Route::get('/landing', function () {
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+Route::get('/konselor/{id}', [SobatController::class, 'show'])->name('dkonselor');

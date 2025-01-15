@@ -18,6 +18,10 @@ class Konselor extends Model
         'name',
         'profile_image',
         'specializations',
+        'bio',
+        'about_me',
+        'handled_cases',
+        'clinical_approaches'
     ];
 
     // Casts untuk kolom yang berisi JSON

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Konselor;
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class SobatController extends Controller
 {
@@ -36,11 +37,36 @@ class SobatController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        try {
+            // Ambil data konselor berdasarkan id
+            $konselor = Konselor::findOrFail($id);
+            
+            // Cek tipe data specializations
+            $specializations = $konselor->specializations;
+            if (is_string($specializations)) {
+                $specializations = json_decode($specializations, true) ?? [];
+            }
+    
+            // Return view dengan data konselor
+            return view('dkonselor', [
+                'konselor' => $konselor,
+                'specializations' => $specializations,
+                'name' => $konselor->name,
+                'profile_image' => $konselor->profile_image,
+                'bio' => $konselor->bio,
+                'about_me' => $konselor->about_me,
+                'handled_cases' => $konselor->handled_cases,
+                'clinical_approaches' => $konselor->clinical_approaches
+            ]);
+            
+        } catch (ModelNotFoundException $e) {
+            // Handle jika konselor tidak ditemukan
+            return redirect()->route('konselor.index')
+                ->with('error', 'Konselor tidak ditemukan');
+        }
     }
-
     /**
      * Show the form for editing the specified resource.
      */
