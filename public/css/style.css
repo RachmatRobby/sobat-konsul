@@ -1165,3 +1165,180 @@ h3 {
 .profile-button:hover {
   background-color: #45a049;
 }
+.konseler-contact {
+  background-color: #fff;
+  min-height: 100vh;
+  position: relative;
+}
+
+.konseler-header {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.konseler-header h1 {
+  color: #4D7861;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.hubungi-page {
+  position: relative;
+  min-height: 100vh;
+  padding: 40px 20px;
+  overflow: hidden;
+}
+
+.circle-bg {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #4D7861;
+  opacity: 0.1;
+}
+
+.circle-1 {
+  width: 300px;
+  height: 300px;
+  left: -150px;
+  top: -50px;
+  background-color: #4D7861;
+}
+
+.circle-2 {
+  width: 100px;
+  height: 100px;
+  left: 15%;
+  top: 10%;
+  background-color: #4D7861;
+}
+
+.circle-3 {
+  width: 150px;
+  height: 150px;
+  right: 10%;
+  top: 20%;
+  background-color: #C8E4D6;
+}
+
+.circle-4 {
+  width: 200px;
+  height: 200px;
+  right: -100px;
+  bottom: 20%;
+  background-color: #4D7861;
+}
+
+.circle-5 {
+  width: 120px;
+  height: 120px;
+  left: 20%;
+  bottom: 15%;
+  background-color: #C8E4D6;
+}
+
+.hubungi-content {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.hubungi-title {
+  text-align: center;
+  color: #4D7861;
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.contact-section {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.text-brand {
+  color: #4D7861;
+}
+
+.contact-desc {
+  font-size: 18px;
+  color: #333;
+}
+
+.contact-subtitle {
+  margin: 30px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-input, 
+.form-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #4D7861;
+}
+
+.form-textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: #4D7861;
+  color: white;
+  padding: 12px 40px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #3d6050;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hubungi-page {
+      padding: 20px;
+  }
+  
+  .hubungi-title {
+      font-size: 28px;
+      margin-bottom: 30px;
+  }
+  
+  .contact-section h2 {
+      font-size: 20px;
+  }
+  
+  .contact-desc,
+  .contact-subtitle {
+      font-size: 16px;
+  }
+}

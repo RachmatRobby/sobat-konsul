@@ -22,7 +22,7 @@
                     <li><a href="{{route('landing') }}">Home</a></li>
                     <li><a href="{{route('about')}}">Tentang Kami</a></li>
                     <li><a href="#layanan">Layanan</a></li>
-                    <li><a href="#hubungi">Hubungi Kami</a></li>
+                    <li><a href={{route('hubungi')}}>Hubungi Kami</a></li>
                     <li><a href="{{ route('konselor') }}">Konselor</a></li>
                 </ul>
             </nav>
