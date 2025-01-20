@@ -14,11 +14,11 @@
                 <img src="{{ asset('images/default-profile.jpg') }}" alt="Default Profile Image">
             @endif
         </div>
-        
+
         <div class="profile-info">
             <h2>{{ $name }}</h2>
             <p class="profession">Psikolog Klinis</p>
-            
+
             <div class="specialties">
                 <h3>Spesialis :</h3>
                 <ul>
@@ -61,9 +61,9 @@
     </div>
 
     <div class="cta-section">
-        <button class="konsultasi-btn">
+        <a href="{{ route('service', $konselor->id) }}" class="konsultasi-btn">
             Konsultasi Sekarang
-        </button>
+        </a>
     </div>
 </div>
 @endsection

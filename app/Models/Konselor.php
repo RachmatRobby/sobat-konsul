@@ -28,4 +28,22 @@ class Konselor extends Model
     protected $casts = [
         'specializations' => 'array',
     ];
+
+    // Relasi dengan model Service
+    public function services()
+    {
+        return $this->hasMany(Service::class);
+    }
+
+    // Relasi dengan model DateService
+    public function dateServices()
+    {
+        return $this->hasMany(DateService::class);
+    }
+
+    // Relasi dengan model TimeService
+    public function timeServices()
+    {
+        return $this->hasMany(TimeService::class);
+    }
 }

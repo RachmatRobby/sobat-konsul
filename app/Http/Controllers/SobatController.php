@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Konselor;
+use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 
@@ -12,7 +14,7 @@ class SobatController extends Controller
      */
     public function index()
     {
-        return view('landing'); 
+        return view('landing');
     }
     /**
      * Show the form for creating a new resource.
@@ -42,13 +44,13 @@ class SobatController extends Controller
         try {
             // Ambil data konselor berdasarkan id
             $konselor = Konselor::findOrFail($id);
-            
+
             // Cek tipe data specializations
             $specializations = $konselor->specializations;
             if (is_string($specializations)) {
                 $specializations = json_decode($specializations, true) ?? [];
             }
-    
+
             // Return view dengan data konselor
             return view('dkonselor', [
                 'konselor' => $konselor,
@@ -60,7 +62,7 @@ class SobatController extends Controller
                 'handled_cases' => $konselor->handled_cases,
                 'clinical_approaches' => $konselor->clinical_approaches
             ]);
-            
+
         } catch (ModelNotFoundException $e) {
             // Handle jika konselor tidak ditemukan
             return redirect()->route('konselor.index')
@@ -89,5 +91,27 @@ class SobatController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function services($id)
+    {
+        try {
+            $konselor = Konselor::findOrFail($id);
+
+            $services = $konselor->services()->with(['dateService', 'timeService'])->get();
+
+            $groupedServices = $services->groupBy(function ($service) {
+                return $service->dateService->date_service;
+            });
+
+            return view('services', [
+                'konselor' => $konselor,
+                'groupedServices' => $groupedServices
+            ]);
+
+        } catch (ModelNotFoundException $e) {
+            return redirect()->route('konselor')
+                ->with('error', 'Konselor tidak ditemukan');
+        }
     }
 }
