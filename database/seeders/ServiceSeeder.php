@@ -31,7 +31,7 @@ class ServiceSeeder extends Seeder
                 $timeServiceId = $faker->randomElement($timeServiceIds);
 
                 DB::table('services')->insert([
-                    'price' => $faker->numberBetween(50000, 100000),
+                    'price' => 1,
                     'konselor_id' => $konselor->id,
                     'date_service_id' => $dateServiceId,
                     'time_service_id' => $timeServiceId,

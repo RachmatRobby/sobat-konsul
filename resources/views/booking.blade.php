@@ -68,8 +68,7 @@
                         </div>
 
                         <!-- Submit Button -->
-                        <button onclick="makePayment()"
-                            class="w-full bg-green-500 text-white font-semibold py-2 rounded">
+                        <button onclick="makePayment()" class="w-full bg-green-500 text-white font-semibold py-2 rounded">
                             Checkout
                         </button>
                     </div>
@@ -87,40 +86,44 @@
             const phone = document.getElementById('phone').value;
 
             fetch("{{ route('booking.pay', ['service_id' => $service->id]) }}", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "X-CSRF-TOKEN": "{{ csrf_token() }}",
-                },
-                body: JSON.stringify({
-                    full_name: fullName,
-                    email: email,
-                    phone: phone,
-                }),
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.snapToken) {
-                    window.snap.pay(data.snapToken, {
-                        onSuccess: function(result) {
-                            const payload = encodeURIComponent(JSON.stringify(result));
-                            window.location.href = "{{ route('booking.success') }}" + "?payload=" + payload + "&full_name=" + encodeURIComponent(fullName) + "&email=" + encodeURIComponent(email) + "&phone=" + encodeURIComponent(phone) + "&service_id={{ $service->id }}";
-                        },
-                        onError: function(result) {
-                            console.error(result);
-                            alert("Payment failed!");
-                        }
-                    });
-                } else {
-                    console.error(data);
-                    alert("Failed to create Snap Token");
-                }
-            })
-            .catch(error => {
-                console.error(error);
-                alert("An error occurred");
-            });
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "X-CSRF-TOKEN": "{{ csrf_token() }}",
+                    },
+                    body: JSON.stringify({
+                        full_name: fullName,
+                        email: email,
+                        phone: phone,
+                    }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.snapToken) {
+                        window.snap.pay(data.snapToken, {
+                            onSuccess: function(result) {
+                                const payload = encodeURIComponent(JSON.stringify(result));
+                                window.location.href = "{{ route('booking.success') }}" + "?payload=" +
+                                    payload + "&full_name=" + encodeURIComponent(fullName) + "&email=" +
+                                    encodeURIComponent(email) + "&phone=" + encodeURIComponent(phone) +
+                                    "&service_id={{ $service->id }}";
+                            },
+                            onError: function(result) {
+                                console.error(result);
+                                alert("Payment failed!");
+                            }
+                        });
+                    } else {
+                        console.error(data);
+                        alert("Failed to create Snap Token");
+                    }
+                })
+                .catch(error => {
+                    console.error(error);
+                    alert("An error occurred");
+                });
         }
     </script>
-    <script src="https://app.midtrans.com/snap/snap.js" data-client-key="{{ config('services.midtrans.clientKey') }}"></script>
+    <script src="https://app.midtrans.com/snap/snap.js" data-client-key="{{ config('services.midtrans.clientKey') }}">
+    </script>
 @endsection
